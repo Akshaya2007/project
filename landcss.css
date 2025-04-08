@@ -1,0 +1,132 @@
+:root {
+  --cyan: #00d4ff;
+  --pink: #ff9ee6;
+  --gold: #ffd700;
+  --white: #ffffff;
+  --text: #000000;
+  --transition: 0.4s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--white);
+  color: var(--text);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--cyan);
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.dark-mode-toggle label {
+  width: 40px;
+  height: 20px;
+  background: var(--gold);
+  display: block;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dark-mode-toggle label::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: var(--white);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.dark-mode input:checked + label::after {
+  transform: translateX(20px);
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, var(--cyan), var(--pink));
+  color: var(--text);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  padding: 0.8rem 2rem;
+  background: var(--gold);
+  color: var(--text);
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  gap: 2rem;
+  background: var(--white);
+}
+
+.feature-card {
+  background: var(--pink);
+  padding: 2rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--cyan);
+  color: var(--text);
+}
