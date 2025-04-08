@@ -72,9 +72,10 @@ body {
   transition: var(--transition);
 }
 
-.dark-mode input:checked + label::after {
+input:checked + label::after {
   transform: translateX(20px);
 }
+
 
 .hero {
   padding: 4rem 2rem;
